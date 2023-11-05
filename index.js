@@ -11,9 +11,9 @@ let passwordLength = 14;
 
 function generateCharacter() { 
     
-    let randomCharacter = Math.floor(Math.random() * characters.length);
+    let randomCharacter = characters[Math.floor(Math.random() * characters.length)];
     
-    return characters[randomCharacter];
+    return randomCharacter;
 }
 
 function generateRandomPassword() {
