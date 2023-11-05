@@ -3,21 +3,36 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 const passwordOne = document.querySelector("#passwordOne");
 const passwordTwo = document.querySelector("#passwordTwo");
+const generateBtnPassword = document.querySelector("#generate-btn");
 
-console.log(passwordOne);
-console.log(passwordTwo);
+console.log(generateBtnPassword);
 
 let passwordLength = 14;
 
 function generateCharacter() { 
-    
+
     let randomCharacter = characters[Math.floor(Math.random() * characters.length)];
     
     return randomCharacter;
 }
 
-function generateRandomPassword() {
+// function generateRandomPassword() {
 
+//     let randomPasswordOne = " ";
+//     let randomPasswordTwo = " ";
+
+//     for(let i = 0; i < passwordLength; i++) {
+        
+//         randomPasswordOne += generateCharacter();  
+//         randomPasswordTwo += generateCharacter();                 
+//     }
+
+//     passwordOne.textContent = randomPasswordOne;  
+//     passwordTwo.textContent = randomPasswordTwo;
+// }
+
+
+generateBtnPassword.addEventListener("click", () => {
     let randomPasswordOne = " ";
     let randomPasswordTwo = " ";
 
@@ -29,8 +44,7 @@ function generateRandomPassword() {
 
     passwordOne.textContent = randomPasswordOne;  
     passwordTwo.textContent = randomPasswordTwo;
-}
-
+});
 
 
 
