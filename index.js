@@ -72,6 +72,7 @@ function showToast(message) {
     toast.className = 'toast';
     toast.textContent = message;
     document.body.appendChild(toast);
+    
     setTimeout(() => {
         document.body.removeChild(toast);
     }, 3000); // The toast notification disappears after 3 seconds
