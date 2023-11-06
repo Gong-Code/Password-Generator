@@ -83,6 +83,11 @@ body{
     font-family: 'Inter';
     color: #55F991;
     text-align: center;
+    cursor: pointer;
+}
+
+#passwordOne:hover{
+    background-color: #3a4553;
 }
 
 
@@ -101,4 +106,21 @@ body{
     font-family: 'Inter';
     color: #55F991;
     text-align: center;
+    cursor: pointer;
+}
+
+#passwordTwo:hover{
+    background-color: #3a4553;
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #55F991;
+    color: #FFFFFF;
+    opacity: 0.9;
+    border-radius: 5px;
+    font-weight: bold;
 }

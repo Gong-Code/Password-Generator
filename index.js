@@ -47,6 +47,36 @@ generateBtnPassword.addEventListener("click", () => {
 });
 
 
+passwordOne.addEventListener("click", async () => {
+    const text = passwordOne.textContent;
+    try {
+        await navigator.clipboard.writeText(text);
+        showToast('Text copied to clipboard');
+    } catch (err) {
+        console.error('Error in copying text: ', err);
+    }
+});
+
+passwordTwo.addEventListener("click", async () => {
+    const text = passwordTwo.textContent;
+    try {
+        await navigator.clipboard.writeText(text);
+        showToast('Text copied to clipboard');
+    } catch (err) {
+        console.error('Error in copying text: ', err);
+    }
+});
+
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        document.body.removeChild(toast);
+    }, 3000); // The toast notification disappears after 3 seconds
+}
+
 
 
 
